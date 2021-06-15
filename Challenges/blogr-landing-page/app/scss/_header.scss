@@ -1,0 +1,171 @@
+.header{
+
+    font-family: 'ubuntu';
+    height: 500px;
+
+    .overlay{
+        background-image:linear-gradient(to right, $veryLightRed, $lightRed);
+        position: absolute;
+        width: 100%;
+        border-bottom-left-radius: 8em;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .container{
+        display: inline-flex;
+        align-items: center;
+        padding-top: 2em;
+    }
+
+    &__logo{
+        img{
+            height: 2.5em;
+            width: 6em;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+    }
+
+    &__bg{
+        img{
+            position: absolute;
+            top: -1200px;
+            height: 3000px;
+            width: 3000px;
+            left: -500px;
+        }
+    }
+
+    &__dropdown{
+        position: relative;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        display: inline-flex;
+        padding-top: 2.5em;
+        cursor: pointer;
+        height: 80px;
+        
+
+        a{
+            text-decoration: none;
+        }
+        
+        .dropbtn{
+            padding-left: 2.5em;
+        }
+        .drop-content{
+            display: none;
+            position: absolute;
+            position: absolute;
+            background-color: white;
+            margin-top: 30px;
+            text-align: center;
+            margin-left: 30px;
+            width: 100px;
+            border-radius: 0.3em;
+            line-height: 1.5em;
+            z-index: 1;
+
+            a{
+                color: grey;
+
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+        &:hover{
+            .dropbtn{
+                text-decoration: underline;
+            }   
+            .drop-content{
+                display: grid;
+            }
+
+        }
+    }
+
+    .log_sign{
+        position: relative;
+        color: white;
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 30em;
+        cursor: pointer;
+
+        button{
+            border-radius: 1.5em;
+            width: 100px;
+            height: 35px;
+            border: none;
+            margin-left: 1.5em;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            color: $lightRed;
+
+            &:hover{
+                color: white;
+                background-color: $veryLightRed;
+            }
+        }
+    }
+
+    &__content{
+        text-align: center;
+        position: relative;
+        padding-top: 100px;
+        color: white;
+        font-family: 'overpass';
+        font-size: 25px;
+        line-height: 1em;
+
+        
+
+        button{
+            border-radius: 1.5em;
+            height: 40px;
+            border: 1px solid white;
+            font-family: 'Ubuntu';
+            font-weight: 600;
+            width: 110px;
+            color: $lightRed;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .one{
+            &:hover{
+                background-color: $veryLightRed;
+                color: white;
+            }
+        }
+        .two{
+            background:none;
+            color: white;
+
+            &:hover{
+                color: $lightRed;
+                background-color: white;
+            }
+        }
+    }
+
+    @media screen and (max-width:375px){
+
+        &__logo{
+            img{
+                margin: 30px;
+            }
+        }
+
+        &__content{
+            font-size: 1em;
+            line-height: 2em;
+        }
+
+    }
+ }
+
+ 

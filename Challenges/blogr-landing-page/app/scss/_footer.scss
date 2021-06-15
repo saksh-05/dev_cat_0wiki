@@ -1,0 +1,57 @@
+.footer{
+    height: 300px;
+    background-color: $geryDarkBlackBlue;
+    font-family: 'ubuntu';
+    display: inline-flex;
+    border-top-right-radius: 8em;
+    width: 100%;
+
+    img{
+        width: 100px;
+        height: 50px;
+        margin: 50px 0 0 110px;
+    }
+
+    &__content{
+        text-decoration: none;
+        display: inline-flex;
+        color: white;
+        margin-left: 160px;
+        margin-top: 30px;
+        line-height: 1.5em;
+        font-size: 20px;
+
+        .para{
+            width: 100px;
+            margin-right: 170px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            font-size: 16px;
+
+        }
+    }
+
+    @media screen and (max-width:375px){
+        height: auto;
+        display: block;
+        text-align: center;
+        padding-bottom: 30px;
+
+        &__content{
+            display: block;
+            margin: 0;
+            .para{
+                margin: 0;
+                width: auto;
+            }
+        }
+
+        img{
+            margin: 60px 0 40px 0;
+        }
+    }
+
+}
