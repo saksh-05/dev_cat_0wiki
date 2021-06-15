@@ -1,0 +1,83 @@
+.header{
+
+    .overlay {
+        position: absolute;
+    }
+
+    .over{
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        scroll-behavior: auto;
+        top: 0px;
+        
+        
+    }
+
+    &__ham{
+        padding-left: 250px;
+    }
+
+    &__menu{
+        display: grid;
+        width: 80%;
+        height: auto;
+        margin: auto;
+        background-color: white;
+        border-radius: 0.5em;
+        text-decoration: none;
+        margin-top: 20%;
+        font-weight: 600;
+        font-size: 20px;
+
+        hr{
+            background-color: $darkCyan;
+            width: 100%;
+            margin: 0px;
+        }
+
+        a{
+            padding: 20px 0 20px 10px;
+            color:black;
+        }
+    }
+
+    .nav{
+        opacity: 0;
+        position: relative;
+    }
+
+
+
+    &__logo{
+        img{
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+    }
+
+    &__links{
+        
+        position: relative;
+        padding-left: 700px;
+        font-weight: 400;
+        text-decoration: none;
+
+        a{    
+            text-decoration: none;
+            color: white;
+
+            &:hover{
+                color: $grayishBlue;
+                text-decoration: underline;
+            }
+            
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+        }
+    }
+}
