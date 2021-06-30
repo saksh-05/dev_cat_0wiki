@@ -83,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
   },
   interact: {
+    alt:'man',
     [theme.breakpoints.up("md")]: {
       width: "60%",
       height:'10%',
@@ -369,7 +370,6 @@ const app = () => {
             component="img"
             src={minteractive}
             className={classes.interact}
-            alt="man"
           />
           <Box className={classes.intcont}>
             <Box

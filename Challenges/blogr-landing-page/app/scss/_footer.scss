@@ -1,10 +1,13 @@
 .footer{
-    height: 300px;
     background-color: $geryDarkBlackBlue;
     font-family: 'ubuntu';
     display: inline-flex;
     border-top-right-radius: 8em;
     width: 100%;
+
+    @include breakpoint-down(small){
+        display: block;
+    }
 
     img{
         width: 100px;
@@ -20,6 +23,10 @@
         margin-top: 30px;
         line-height: 1.5em;
         font-size: 20px;
+
+        @include breakpoint-down(small){
+            display: block;
+        }
 
         .para{
             width: 100px;

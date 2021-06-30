@@ -2,20 +2,19 @@
 
     font-family: 'ubuntu';
     height: 500px;
-
-    .overlay{
-        background-image:linear-gradient(to right, $veryLightRed, $lightRed);
-        position: absolute;
-        width: 100%;
-        border-bottom-left-radius: 8em;
-        height: 500px;
-        overflow: hidden;
-    }
+    background-image:linear-gradient(to right, $veryLightRed, $lightRed);
+    position: absolute;
+    width: 100%;
+    border-bottom-left-radius: 8em;
+    height: 500px;
+    overflow: hidden;
 
     .container{
         display: inline-flex;
         align-items: center;
         padding-top: 2em;
+        @include breakpoint-down(small){
+        }
     }
 
     &__logo{
@@ -92,7 +91,6 @@
         color: white;
         align-items: center;
         padding-top: 20px;
-        padding-left: 30em;
         cursor: pointer;
 
         button{

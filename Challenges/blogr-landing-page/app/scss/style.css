@@ -1,33 +1,22 @@
-html {
-  font-size: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
-}
-
-*, *::before, *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
 }
 
 .hide-for-desktop {
   margin-left: 150px;
   cursor: pointer;
   position: relative;
+  display: block;
 }
 
-@media screen and (min-width: 375px) {
+@media (min-width: 42em) {
   .hide-for-desktop {
     display: none;
-    cursor: pointer;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media (max-width: 41em) {
   .hide-for-mobile {
     display: none;
   }
@@ -268,7 +257,7 @@ body {
   margin-left: 80px;
 }
 
-@media screen and (max-width: 375px) {
+@media (max-width: 41em) {
   .section2 {
     margin-top: 230px;
     height: auto;
@@ -326,7 +315,7 @@ body {
   color: #1f3f5b;
 }
 
-@media screen and (max-width: 375px) {
+@media (max-width: 41em) {
   .section3 {
     height: auto;
   }
@@ -348,9 +337,6 @@ body {
 .header {
   font-family: 'ubuntu';
   height: 500px;
-}
-
-.header .overlay {
   background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
   position: absolute;
@@ -444,7 +430,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 20px;
-  padding-left: 30em;
   cursor: pointer;
 }
 
@@ -513,7 +498,6 @@ body {
 }
 
 .footer {
-  height: 300px;
   background-color: #25252d;
   font-family: 'ubuntu';
   display: -webkit-inline-box;
@@ -521,6 +505,12 @@ body {
   display: inline-flex;
   border-top-right-radius: 8em;
   width: 100%;
+}
+
+@media (max-width: 41em) {
+  .footer {
+    display: block;
+  }
 }
 
 .footer img {
@@ -539,6 +529,12 @@ body {
   margin-top: 30px;
   line-height: 1.5em;
   font-size: 20px;
+}
+
+@media (max-width: 41em) {
+  .footer__content {
+    display: block;
+  }
 }
 
 .footer__content .para {
