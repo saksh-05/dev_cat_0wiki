@@ -7,7 +7,7 @@ const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 var config = {
   mode: "development",
   entry: "./src/index.js",
-  devtool: "eval",
+  devtool: "false",
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "web_bundle.[hash].js",
@@ -37,6 +37,7 @@ var config = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
+    [new webpack.SourceMapDevToolPlugin({})],
   ],
 };
 

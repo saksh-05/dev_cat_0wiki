@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid black",
     borderRadius: "0",
     marginTop: "3rem",
-    marginBottom: "5rem",
   },
 }));
 
@@ -150,18 +149,18 @@ const ourmedia = () => {
     <ThemeProvider theme={theme}>
       <Hidden mdUp>
         <GridList cols={1} style={{ width: "100%" }}>
-            {mtileData.map((tile) => (
-              <GridListTile
-                key={tile.img}
-                style={{
-                  padding: 0,
-                  marginTop: "1.5rem",
-                }}
-              >
-                <img src={tile.img} alt={tile.img} />
-                <GridListTileBar title={tile.title} />
-              </GridListTile>
-            ))}
+          {mtileData.map((tile) => (
+            <GridListTile
+              key={tile.img}
+              style={{
+                padding: 0,
+                marginTop: "1.5rem",
+              }}
+            >
+              <img src={tile.img} alt={tile.img} />
+              <GridListTileBar title={tile.title} />
+            </GridListTile>
+          ))}
         </GridList>
         <Box textAlign="center">
           <Button className={classes.btn} onClick={handleClick}>
@@ -169,11 +168,15 @@ const ourmedia = () => {
           </Button>
         </Box>
       </Hidden>
-      <Hidden mdDown>
+      <Hidden smDown>
         <GridList cols={12} spacing={24}>
           {dtileData.map((tile) => (
             <GridListTile key={tile.img} cols={3} style={{ height: "29rem" }}>
-              <img src={tile.img} />
+              <img
+                src={tile.img}
+                alt={tile.img}
+                style={{ width: "250px", height: "29rem" }}
+              />
               <GridListTileBar
                 title={tile.title}
                 style={{ alignItems: "flex-end", bottom: "1rem" }}
