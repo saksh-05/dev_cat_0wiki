@@ -83,10 +83,10 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
   },
   interact: {
-    alt:'man',
-    [theme.breakpoints.up("md")]: {
+    width:'100%',
+    [theme.breakpoints.between("md",'lg')]: {
       width: "60%",
-      height:'10%',
+      height:'386px',
       padding: 0,
     },
    
@@ -366,8 +366,8 @@ const app = () => {
       </Container>
       <Container className={classes.content}>
         <Box mt="6rem" className={classes.intact}>
-          <CardMedia
-            component="img"
+          <img
+            alt="man"
             src={minteractive}
             className={classes.interact}
           />
@@ -385,11 +385,13 @@ const app = () => {
             <Box
               mt="1rem"
               textAlign="center"
-              fontFamily="Alata"
+              fontFamily="Josefin Sans"
+              fontWeight="400"
               fontSize="1.3rem"
               color="gray"
               mx="2rem"
               lineHeight="2rem"
+              mb="2rem"
               className={classes.intsubhead}
             >
               Founded in 2011, Loopstudios has been producing world-class
