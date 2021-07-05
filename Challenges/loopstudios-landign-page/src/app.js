@@ -37,9 +37,9 @@ const useStyles = makeStyles((theme) => ({
   },
   dtitle: {
     flexGrow: 1,
-    [theme.breakpoints.between('sm', 'sm')]: {
-      marginLeft:'0.5rem',
-    }
+    [theme.breakpoints.between("sm", "sm")]: {
+      marginLeft: "0.5rem",
+    },
   },
   media: {
     height: "650px",

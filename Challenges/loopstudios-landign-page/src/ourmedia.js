@@ -32,20 +32,20 @@ const useStyles = makeStyles((theme) => ({
     width: "92.28%",
   },
   btn: {
-    background: 'white',
-    color:'black',
+    background: "white",
+    color: "black",
     width: "10rem",
     height: "2.8rem",
     fontFamily: "Josefin Sans",
     border: "2px solid black",
     borderRadius: "0",
     marginTop: "3rem",
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    fontWeight:'400',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
+    fontWeight: "400",
   },
 }));
 
@@ -146,22 +146,19 @@ const dtileData = [
 const ourmedia = () => {
   const classes = useStyles();
   const [op, setOp] = useState(false);
-   
-  const changeBck = (e) => {
-      if (!op) {
-        e.target.style.background = 'black';
-        e.target.style.color= 'white';
-        setOp(true);
-      }
-      else {
-        e.target.style.background = 'white';
-        e.target.style.color= 'black';
-        setOp(false);
-      }
-    }
 
-  
-  
+  const changeBck = (e) => {
+    if (!op) {
+      e.target.style.background = "black";
+      e.target.style.color = "white";
+      setOp(true);
+    } else {
+      e.target.style.background = "white";
+      e.target.style.color = "black";
+      setOp(false);
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Hidden mdUp>
@@ -185,7 +182,7 @@ const ourmedia = () => {
           onMouseEnter={changeBck}
           onMouseLeave={changeBck}
         >
-        See All
+          See All
         </Box>
       </Hidden>
       <Hidden smDown>
