@@ -83,14 +83,14 @@ const footer = () => {
             </Box>
           </Hidden>
           <Box className={classes.ftricon}>
-            <a href="#">
+            <a href="/">
               <img
                 src={facebook}
                 alt="facebook"
                 style={{ width: "1.5rem", height: "1.5rem" }}
               />
             </a>
-            <a href="#">
+            <a href="/">
               <img
                 src={instagram}
                 alt="instagram"
@@ -101,7 +101,7 @@ const footer = () => {
                 }}
               />
             </a>
-            <a href="#">
+            <a href="/">
               <img
                 src={pinterest}
                 alt="pinterest"
@@ -112,7 +112,7 @@ const footer = () => {
                 }}
               />
             </a>
-            <a href="#">
+            <a href="/">
               <img
                 src={twitter}
                 alt="twitter"
