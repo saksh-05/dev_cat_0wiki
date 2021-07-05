@@ -98,6 +98,7 @@ const footer = () => {
                   marginLeft: "1.5rem",
                   width: "1.5rem",
                   height: "1.5rem",
+                  cursor:'pointer',
                 }}
               />
             </a>
