@@ -87,7 +87,7 @@ const footer = () => {
               <img
                 src={facebook}
                 alt="facebook"
-                style={{ width: "1.5rem", height: "1.5rem" }}
+                style={{ width: "1.5rem", height: "1.5rem", cursor:'pointer' }}
               />
             </a>
             <a href="#">
