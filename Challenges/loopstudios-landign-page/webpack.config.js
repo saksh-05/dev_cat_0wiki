@@ -10,17 +10,22 @@ var config = {
   devtool: "eval",
   output: {
     path: path.join(__dirname, "/dist"),
-    filename: "web_bundle.[hash].js",
+    filename: "web_bundle.[contenthash].js",
   },
   devServer: {
     contentBase: path.resolve(__dirname, "./dist"),
     hot: true,
   },
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: false,
+  },
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.js$/,
@@ -45,7 +50,8 @@ module.exports = (env, argv) => {
     config.module.rules[0].use[0] = MiniCssExtractPlugin.loader;
     config.plugins.push(
       new MiniCssExtractPlugin({
-        filename: "web_bundle.[hash].css",
+        filename: "web_bundle.[contenthash].css",
+        ignoreOrder: true,
       }),
       new CleanWebpackPlugin(),
       new WebpackManifestPlugin(),

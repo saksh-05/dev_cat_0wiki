@@ -9,8 +9,6 @@ import {
   Box,
   CardMedia,
   Container,
-  Card,
-  CardContent,
   Button,
 } from "@material-ui/core";
 import {
@@ -22,14 +20,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import mhero from "./images/mobile/image-hero.jpg";
 import dhero from "./images/desktop/image-hero.jpg";
-import minteractive from "./images/mobile/image-interactive.jpg";
-import dinteractive from "./images/desktop/image-interactive.jpg";
 import OurMedia from "./ourmedia";
 import logo from "./images/logo.svg";
-import facebook from "./images/icon-facebook.svg";
-import instagram from "./images/icon-instagram.svg";
-import pinterest from "./images/icon-pinterest.svg";
-import twitter from "./images/icon-twitter.svg";
+import Footer from "./footer";
+import Intr from "./intractive";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,33 +35,35 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  dtitle: {
+    flexGrow: 1,
+    [theme.breakpoints.between('sm', 'sm')]: {
+      marginLeft:'0.5rem',
+    }
+  },
   media: {
     height: "650px",
     width: "100%",
   },
   hero: {
-    position: `absolute`,
-    top: `2.5rem`,
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+    boxSizing: "border-box",
+    marginTop: "-600px",
     height: `700px`,
     padding: 0,
     width: "92.28%",
-    marginLeft:'1rem',
     [theme.breakpoints.up("md")]: {
       width: "80%",
-      marginLeft: "7.89rem",
-    },
-    [theme.breakpoints.between("sm", "md")]: {
-      width:'87%',
-      marginLeft: "2.5rem",
-      marginRight:'auto',
     },
   },
   content: {
     [theme.breakpoints.up("md")]: {
-      width: '80%',
-      padding:0,
+      width: "80%",
+      padding: 0,
     },
-    [theme.breakpoints.between("sm", "md")]: {
+    [theme.breakpoints.between("sm", "sm")]: {
       width: "92.28%",
       padding: 0,
     },
@@ -78,93 +74,40 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "4.8rem",
       marginTop: "8.5rem",
     },
+    [theme.breakpoints.between("sm", "sm")]: {
+      width: "60%",
+    },
   },
   tool: {
     padding: 0,
-  },
-  interact: {
-    width:'100%',
-    [theme.breakpoints.between("md",'lg')]: {
-      width: "60%",
-      height:'386px',
-      padding: 0,
-    },
-   
-  },
-  intact: {
-    [theme.breakpoints.up("md")]: {
-      display: "inline-flex",
-      padding: 0,
-      margin: "6rem 0 0 0",
-      width: "92.8%",
-    },
-  },
-  intcont: {
-    [theme.breakpoints.up("md")]: {
-      position: "absolute",
-      width: "50%",
-      marginLeft: "27rem",
-      background: "white",
-      marginTop: "7.8rem",
-    },
-  },
-  inthead: {
-    [theme.breakpoints.up("md")]: {
-      paddingLeft: "4rem",
-      fontSize: "2.5rem",
-      textAlign: "left",
-    },
-  },
-  intsubhead: {
-    [theme.breakpoints.up("md")]: {
-      marginLeft: 0,
-      paddingLeft: "4rem",
-      textAlign: "left",
-      lineHeight: "1.5rem",
-    },
   },
   crt: {
     [theme.breakpoints.up("md")]: {
       textAlign: "left",
       marginTop: "9rem",
       display: "inline-flex",
-      width: "100%",
+      width: "86.9%",
     },
-  },
-  btn: {
-    width: "10rem",
-    border: "2px solid black",
-    borderRadius: 0,
-    marginTop: "-1rem",
+    [theme.breakpoints.between("md", "md")]: {
+      width: "82%",
+      display: "inline-flex",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2.8rem",
+    },
   },
   bbtn: {
-    width: '60%',
-    textAlign: 'end',
-    [theme.breakpoints.between('sm','md')]: {
-      width:'55%',
-    }
+    display: "inline-flex",
+    border: "2px solid black",
+    borderRadius: 0,
+    fontSize: "1rem",
+    width: "8rem",
+    height: "2rem",
+    alignItems: "center",
+    justifyContent: "center",
+    fontWeight: "400",
+    cursor: "pointer",
   },
-  logo: {
-    [theme.breakpoints.up("md")]: {
-      display: "inline-flex",
-      width: "80%",
-    },
-  },
-  ftricon: {
-    marginTop: "3rem",
-    [theme.breakpoints.up("md")]: {
-      margin: "0",
-      width: "100%",
-      textAlign: "end",
-    },
-  },
-  caption: {
-    display: 'inline-flex',
-    color: 'secondary',
-    [theme.breakpoints.down('sm')]: {
-      display:'block',
-    }
-  }
 }));
 
 const theme = createMuiTheme({
@@ -220,12 +163,35 @@ const theme = createMuiTheme({
 
 const app = () => {
   const [open, setOpen] = useState(false);
+  const [bck, setBck] = useState(false);
+  const [undr, setUndr] = useState(false);
   const classes = useStyles();
 
   const handleClick = () => {
     setOpen(!open);
   };
 
+  const changeBackground = (e) => {
+    if (!bck) {
+      e.target.style.background = "black";
+      e.target.style.color = "white";
+      setBck(true);
+    } else {
+      e.target.style.background = "white";
+      e.target.style.color = "black";
+      setBck(false);
+    }
+  };
+
+  const changeUnderLine = (e) => {
+    if (!undr) {
+      e.target.classList.add("hvr");
+      setUndr(true);
+    } else {
+      e.target.classList.remove("hvr");
+      setUndr(false);
+    }
+  };
   return (
     <ThemeProvider theme={theme}>
       <Hidden smDown>
@@ -245,22 +211,52 @@ const app = () => {
           </Box>
           <Hidden smDown>
             <nav>
-              <Box fontFamily="Josefin Sans">
-                <Button color="primary" href="/">
-                  About
-                </Button>
-                <Button color="primary" disableRipple href="#">
-                  Careers
-                </Button>
-                <Button color="primary" disableRipple href="#">
-                  Events
-                </Button>
-                <Button color="primary" disableRipple href="#">
-                  Products
-                </Button>
-                <Button color="primary" disableRipple href="#">
-                  Support
-                </Button>
+              <Box display=" inline-flex" width="61%">
+                <Box fontWeight={600} mt={1}>
+                  <a
+                    href="#"
+                    onMouseEnter={changeUnderLine}
+                    onMouseLeave={changeUnderLine}
+                  >
+                    About
+                  </a>
+                </Box>
+                <Box fontWeight={600} mt={1} ml={3}>
+                  <a
+                    href="#"
+                    onMouseEnter={changeUnderLine}
+                    onMouseLeave={changeUnderLine}
+                  >
+                    Carrer
+                  </a>
+                </Box>
+                <Box fontWeight={600} mt={1} ml={3}>
+                  <a
+                    href="#"
+                    onMouseEnter={changeUnderLine}
+                    onMouseLeave={changeUnderLine}
+                  >
+                    Event
+                  </a>
+                </Box>
+                <Box fontWeight={600} mt={1} ml={3}>
+                  <a
+                    href="#"
+                    onMouseEnter={changeUnderLine}
+                    onMouseLeave={changeUnderLine}
+                  >
+                    Products
+                  </a>
+                </Box>
+                <Box fontWeight={600} mt={1} ml={3}>
+                  <a
+                    href="#"
+                    onMouseEnter={changeUnderLine}
+                    onMouseLeave={changeUnderLine}
+                  >
+                    Support
+                  </a>
+                </Box>
               </Box>
             </nav>
           </Hidden>
@@ -274,15 +270,13 @@ const app = () => {
               <div onKeyDown={handleClick} onClick={handleClick}>
                 <AppBar position="relative" color="transparent">
                   <Toolbar>
-                    <Typography
-                      color="primary"
-                      variant="h4"
-                      className={classes.title}
-                    >
-                      <Box fontWeight={600} ml={2}>
-                        loopstudio
-                      </Box>
-                    </Typography>
+                    <Box className={classes.dtitle} ml={3}>
+                      <img
+                        src={logo}
+                        alt="logo"
+                        style={{ width: "192px", height: "32px" }}
+                      />
+                    </Box>
                     <IconButton
                       className={classes.menuButton}
                       color="primary"
@@ -365,42 +359,7 @@ const app = () => {
         </Box>
       </Container>
       <Container className={classes.content}>
-        <Box mt="6rem" className={classes.intact}>
-          <img
-            alt="man"
-            src={minteractive}
-            className={classes.interact}
-          />
-          <Box className={classes.intcont}>
-            <Box
-              component="header"
-              fontFamily="Josefin Sans"
-              fontSize="3rem"
-              textAlign="center"
-              mt="3rem"
-              className={classes.inthead}
-            >
-              THE LEADER IN INTERACTIVE VR
-            </Box>
-            <Box
-              mt="1rem"
-              textAlign="center"
-              fontFamily="Josefin Sans"
-              fontWeight="400"
-              fontSize="1.3rem"
-              color="gray"
-              mx="2rem"
-              lineHeight="2rem"
-              mb="2rem"
-              className={classes.intsubhead}
-            >
-              Founded in 2011, Loopstudios has been producing world-class
-              virtual reality projects for some of the best companies around the
-              globe. Our award-winning creations have transformed businesses
-              through digital experiences that bind to their brand.
-            </Box>
-          </Box>
-        </Box>
+        <Intr />
         <Box
           component="header"
           mt="6rem"
@@ -409,108 +368,22 @@ const app = () => {
           className={classes.crt}
         >
           OUR CREATIONS
-          <Hidden smDown>
-            <Box className={classes.bbtn}>
-              <Button className={classes.btn}>See All</Button>
-            </Box>
-          </Hidden>
         </Box>
+        <Hidden smDown>
+          <Box
+            className={classes.bbtn}
+            onMouseEnter={changeBackground}
+            onMouseLeave={changeBackground}
+          >
+            See All
+          </Box>
+        </Hidden>
         <Box mt="2rem" mb="5rem">
           <OurMedia />
         </Box>
       </Container>
 
-      <Box
-        style={{ background: "#000000", color: "#ffffff" }}
-        pb="3rem"
-        pt={5}
-        textAlign="center"
-        fontFamily="Josefin Sans"
-        fontWeight={300}
-        width="100%"
-        className={classes.footer}
-      >
-        <Box className={classes.logo}>
-          <img
-            src={logo}
-            alt="logo"
-            style={{ width: "192px", height: "32px" }}
-          />
-          <Hidden mdUp>
-            <Box fontWeight={600} mt={3}>
-              About
-            </Box>
-            <Box fontWeight={600} mt={3}>
-              Carrer
-            </Box>
-            <Box fontWeight={600} mt={3}>
-              Event
-            </Box>
-            <Box fontWeight={600} mt={3}>
-              Product
-            </Box>
-            <Box fontWeight={600} mt={3}>
-              Support
-            </Box>
-          </Hidden>
-          <Box className={classes.ftricon}>
-            <img
-              src={facebook}
-              alt="facebook"
-              style={{ width: "1.5rem", height: "1.5rem" }}
-            />
-            <img
-              src={instagram}
-              alt="instagram"
-              style={{
-                marginLeft: "1.5rem",
-                width: "1.5rem",
-                height: "1.5rem",
-              }}
-            />
-            <img
-              src={pinterest}
-              alt="pinterest"
-              style={{
-                marginLeft: "1.5rem",
-                width: "1.5rem",
-                height: "1.5rem",
-              }}
-            />
-            <img
-              src={twitter}
-              alt="twitter"
-              style={{
-                marginLeft: "1.5rem",
-                width: "1.5rem",
-                height: "1.5rem",
-              }}
-            />
-          </Box>
-        </Box>
-        <Box display=" inline-flex" width="61%">
-          <Hidden smDown>
-            <Box fontWeight={600} mt={3}>
-              About
-            </Box>
-            <Box fontWeight={600} mt={3} ml={3}>
-              Carrer
-            </Box>
-            <Box fontWeight={600} mt={3} ml={3}>
-              Event
-            </Box>
-            <Box fontWeight={600} mt={3} ml={3}>
-              Product
-            </Box>
-            <Box fontWeight={600} mt={3} ml={3}>
-              Support
-            </Box>
-          </Hidden>
-        </Box>
-        <Box className={classes.caption}>
-          2021 loopstudios. All rights reserved
-        </Box>
-      </Box>
+      <Footer />
     </ThemeProvider>
   );
 };

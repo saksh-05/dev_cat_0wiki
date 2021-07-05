@@ -8,9 +8,8 @@ import {
   Hidden,
   makeStyles,
   ThemeProvider,
-  useMediaQuery,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import mearth from "./images/mobile/image-deep-earth.jpg";
 import dearth from "./images/desktop/image-deep-earth.jpg";
 import mnight from "./images/mobile/image-night-arcade.jpg";
@@ -41,6 +40,12 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid black",
     borderRadius: "0",
     marginTop: "3rem",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    fontWeight:'400',
   },
 }));
 
@@ -140,10 +145,22 @@ const dtileData = [
 
 const ourmedia = () => {
   const classes = useStyles();
-  const handleClick = (e) => {
-    e.target.style.background = 'black';
-    e.target.style.color = 'white';
-  }
+  const [op, setOp] = useState(false);
+   
+  const changeBck = (e) => {
+      if (!op) {
+        e.target.style.background = 'black';
+        e.target.style.color= 'white';
+        setOp(true);
+      }
+      else {
+        e.target.style.background = 'white';
+        e.target.style.color= 'black';
+        setOp(false);
+      }
+    }
+
+  
   
   return (
     <ThemeProvider theme={theme}>
@@ -162,10 +179,13 @@ const ourmedia = () => {
             </GridListTile>
           ))}
         </GridList>
-        <Box textAlign="center">
-          <Button className={classes.btn} onClick={handleClick}>
-            See All
-          </Button>
+        <Box
+          textAlign="center"
+          className={classes.btn}
+          onMouseEnter={changeBck}
+          onMouseLeave={changeBck}
+        >
+        See All
         </Box>
       </Hidden>
       <Hidden smDown>
