@@ -124,9 +124,6 @@ const theme = createMuiTheme({
   },
   overrides: {
     MuiPaper: {
-      elevation4: {
-        boxShadow: "0",
-      },
       root: {
         backgroundColor: "black",
       },

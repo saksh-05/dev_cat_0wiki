@@ -70,6 +70,10 @@ const theme = createMuiTheme({
         width: "11rem",
       },
     },
+    MuiGridList: {
+      root: {
+      },
+    },
   },
 });
 
