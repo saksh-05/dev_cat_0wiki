@@ -1,0 +1,50 @@
+export const theme = createMuiTheme({
+    palette:{
+        primary:{
+            main:"#purple"
+        },
+        secondary:{
+            main:"#green"
+        }
+    },
+    typography:{
+        fontFamily:"",
+        can define for different variant also
+    },
+    shape:{
+        boderRadius: 30
+    },
+    spacing: ,
+    overrides:{ //for overriding the class 
+        MuiButton:{
+            root:{
+                textTransformation:"none",
+                padding:"",
+            },
+            fullwidth:{
+                maxWidth:"300px"
+            }
+        }
+    }
+    props:{ // for changing the whole class
+        MuiButton:{
+            disableripple:true,
+            variant:"outlined",
+            color: "primary"
+        },
+        MuiCheckbox:{
+
+        },
+        MuiTextField:{
+            root:{
+                
+            }
+        },
+        MuiInputLabel:{
+            root:{
+
+            }
+        },
+    }
+
+})

@@ -1,0 +1,4 @@
+<< How to create your own hooks? 
+>> So custom Hooks and components are functions, so we can share logic of one function to other function
+>> we need custom hooks when there are some fucntions that have same logic.
+>>
