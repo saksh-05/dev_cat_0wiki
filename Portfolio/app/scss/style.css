@@ -1,0 +1,698 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans, Alata,Josefin Slab, Montserrat";
+  margin: 0;
+  background: #F0EFFF;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 56.26em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid black;
+  font-family: Josefin Sans;
+  background: #f0efff;
+  height: 5rem;
+  top: -0.000001rem;
+  z-index: 1;
+}
+
+.navbar .d-head {
+  padding-left: 2rem;
+  font-size: 2rem;
+  color: #190dd4;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.navbar .d-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.navbar .d-menu li {
+  margin-right: 1rem;
+  text-underline-offset: 0.5rem;
+  cursor: pointer;
+}
+
+.m-menu {
+  width: 100%;
+  height: 2.5rem;
+  -webkit-box-shadow: 0 -1px 6px 0 #000a00;
+          box-shadow: 0 -1px 6px 0 #000a00;
+  bottom: 0;
+  position: fixed;
+  background-color: #CCC9F2;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.m-head {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans";
+  font-weight: 600;
+  background: -webkit-linear-gradient(#1604F8, #252350);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0.6rem;
+}
+
+.dashboard {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 3%;
+  position: absolute;
+  margin-top: 0.5rem;
+}
+
+.dashboard svg {
+  margin-right: 1.5rem;
+}
+
+.drawer-nav {
+  display: none;
+}
+
+.navigation {
+  list-style: none;
+  width: 21.25em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+@media (max-width: 30.29em) {
+  .navigation {
+    width: 100%;
+  }
+}
+
+.navigation li {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  background: white;
+  border-radius: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+}
+
+.navigation li h4 {
+  margin: 0;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  position: relative;
+  top: 0.5rem;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 6rem;
+  font-family: "Josefin Sans";
+}
+
+@media (min-width: 56.26em) {
+  .hero {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero__container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@media (min-width: 56.26em) {
+  .hero__container {
+    width: 100%;
+  }
+}
+
+.hero .icon {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  margin: 1rem 3rem 0 -4rem;
+}
+
+@media (min-width: 56.26em) {
+  .hero .icon {
+    margin: 1rem 10rem 0rem 2rem;
+  }
+}
+
+.hero__img {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@media (min-width: 56.26em) {
+  .hero__detail {
+    margin-right: 4rem;
+    text-align: left;
+  }
+}
+
+.hero .res-download {
+  color: white;
+  background: #6e63e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 14rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.5rem;
+}
+
+.about {
+  font-family: "Josefin Sans";
+  text-align: center;
+  margin: auto;
+  margin-top: 9rem;
+  width: 80%;
+}
+
+@media (min-width: 56.26em) {
+  .about__main {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 56.26em) {
+  .about__img {
+    margin-left: 8rem;
+  }
+}
+
+@media (min-width: 56.26em) {
+  .about__maindetail {
+    text-align: left;
+    margin-left: 5rem;
+    width: 40%;
+  }
+}
+
+.about__detail {
+  font-weight: 400;
+  margin: 2rem auto;
+}
+
+.about__btn {
+  color: white;
+  background: #6e63e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 14rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.5rem;
+}
+
+.skills {
+  text-align: center;
+  margin: auto;
+  margin-top: 9rem;
+  font-family: 'Josefin Sans';
+}
+
+@media (min-width: 56.26em) {
+  .skills {
+    width: 80%;
+  }
+}
+
+@media (min-width: 56.26em) {
+  .skills__main {
+    width: 100%;
+    text-align: left;
+    padding-left: 4rem;
+  }
+}
+
+.skills__detail {
+  background: white;
+  border: 1px solid #6e63e1;
+  border-radius: 0.5rem;
+  width: 80%;
+  height: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-family: "Josefin Sans";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (min-width: 56.26em) {
+  .skills__detail {
+    width: 46%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.qualification {
+  text-align: center;
+  margin: auto;
+  margin-top: 9rem;
+  font-family: 'Josefin Sans';
+}
+
+.services {
+  text-align: center;
+  margin: auto;
+  margin-top: 9rem;
+  font-family: 'Josefin Sans';
+}
+
+.services__detail {
+  width: 40%;
+  height: 16.6rem;
+  display: inline-block;
+  border: 1px solid #6e63e1;
+  margin: auto;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 1px 1px 10px #6e63e1;
+          box-shadow: 1px 1px 10px #6e63e1;
+  background: white;
+}
+
+@media (max-width: 30.29em) {
+  .services__detail {
+    width: 45%;
+    font-size: 0.8rem;
+    margin-left: 0;
+    -webkit-box-shadow: 1px 1px 5px #6e63e1;
+            box-shadow: 1px 1px 5px #6e63e1;
+  }
+}
+
+.services__detail h1 {
+  font-weight: 400;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.services__detail h4 {
+  font-weight: 100;
+  color: #1604F8;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.portfolio {
+  text-align: center;
+  margin: auto;
+  margin-top: 9rem;
+  font-family: 'Josefin Sans';
+  width: 92.28%;
+}
+
+.portfolio__container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 56.26em) {
+  .portfolio__container {
+    width: 50%;
+  }
+}
+
+.portfolio__card {
+  display: none;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  -webkit-box-shadow: 1px 4px 10px #6e63e1;
+          box-shadow: 1px 4px 10px #6e63e1;
+}
+
+@media (min-width: 56.26em) {
+  .portfolio__card {
+    height: 22rem;
+  }
+}
+
+.portfolio__img {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.portfolio__img img {
+  height: 13rem;
+  width: 20rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 30.29em) {
+  .portfolio__img img {
+    height: 10rem;
+    width: 15rem;
+  }
+}
+
+.portfolio__description {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 30.29em) {
+  .portfolio__description {
+    width: 94%;
+  }
+}
+
+.portfolio__dot {
+  text-align: center;
+}
+
+.portfolio__dot .dot {
+  border-radius: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 1.5rem 0.1rem;
+  border-radius: 50%;
+  background-color: #bbb;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.portfolio__dot .active {
+  background-color: #190dd4;
+}
+
+.contact {
+  text-align: center;
+  margin: auto;
+  margin-top: 9rem;
+  font-family: 'Josefin Sans';
+}
+
+@media (min-width: 56.26em) {
+  .contact {
+    width: 80%;
+  }
+}
+
+@media (min-width: 56.26em) {
+  .contact__main {
+    width: 45%;
+    text-align: left;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    margin-top: 2rem;
+  }
+}
+
+.contact__icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 90%;
+  height: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  -webkit-box-shadow: 1px 1px 10px #6e63e1;
+          box-shadow: 1px 1px 10px #6e63e1;
+}
+
+.contact__icon .call,
+.contact__icon .email,
+.contact__icon .location {
+  margin-left: 2rem;
+}
+
+.contact__icon .call h1,
+.contact__icon .email h1,
+.contact__icon .location h1 {
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0;
+}
+
+.contact__icon .call h4,
+.contact__icon .email h4,
+.contact__icon .location h4 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 0.2rem;
+}
+
+.contact__form {
+  text-align: left;
+  width: 90%;
+  margin-left: 2rem;
+}
+
+@media (min-width: 56.26em) {
+  .contact__form {
+    width: 45%;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    position: relative;
+    top: -2rem;
+  }
+}
+
+@media (max-width: 30.29em) {
+  .contact__form {
+    margin-left: 1.6rem;
+  }
+}
+
+.contact__form textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
+.contact__form input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10rem;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  border: 1px solid #6e63e1;
+  background: #6e63e1;
+  color: white;
+  font-family: Josefin sans;
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  text-align: center;
+  margin: auto;
+  margin-top: 9rem;
+  font-family: 'Josefin Sans';
+  padding-bottom: 5rem;
+  background: #6e63e1;
+  color: white;
+}
+
+@media (min-width: 56.26em) {
+  .footer {
+    text-align: left;
+    padding-bottom: 3rem;
+  }
+}
+
+.footer a {
+  color: white;
+}
+
+.footer h1 {
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+@media (min-width: 56.26em) {
+  .footer h1 {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 10rem;
+  }
+}
+
+.footer h4 {
+  text-underline-offset: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 56.26em) {
+  .footer h4 {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 56.26em) {
+  .footer__main {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 65%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (min-width: 56.26em) {
+  .footer__icons {
+    margin-left: 10rem;
+  }
+}
+
+.dot:hover {
+  background-color: #190dd4;
+}
+
+.arrow:hover {
+  fill: #190dd4;
+  stroke: #190dd4;
+}
+
+.footer h4:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.d-menu li:hover {
+  -webkit-text-decoration: underline 0.2rem #0cf7bc;
+          text-decoration: underline 0.2rem #0cf7bc;
+}
+/*# sourceMappingURL=style.css.map */

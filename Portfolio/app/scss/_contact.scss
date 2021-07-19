@@ -1,0 +1,79 @@
+.contact {
+  @include pageSpace;
+
+  @include breakpoint-up(medium) {
+    width: 80%;
+  }
+  &__main {
+    @include breakpoint-up(medium) {
+      width: 45%;
+      text-align: left;
+      display: inline-grid;
+      margin-top: 2rem;
+    }
+  }
+  &__icon {
+    display: inline-flex;
+    width: 90%;
+    height: 5rem;
+    align-items: center;
+    background: white;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px $mediumBlue;
+
+    .call,
+    .email,
+    .location {
+      margin-left: 2rem;
+      h1 {
+        font-weight: 400;
+        width: fit-content;
+        margin-bottom: 0;
+      }
+      h4 {
+        width: fit-content;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  &__form {
+    text-align: left;
+    width: 90%;
+    margin-left: 2rem;
+
+    @include breakpoint-up(medium) {
+      width: 45%;
+      display: inline-grid;
+      position: relative;
+      top: -2rem;
+    }
+
+    @include breakpoint-down(xsmall) {
+      margin-left: 1.6rem;
+    }
+    textarea {
+      width: 100%;
+      border-radius: 0.5rem;
+      border: 1px solid black;
+      height: 2.5rem;
+      padding: 0.5rem;
+    }
+    input {
+      display: flex;
+      justify-content: center;
+      width: 10rem;
+      border-radius: 0.5rem;
+      height: 2.5rem;
+      border: 1px solid $mediumBlue;
+      background: $mediumBlue;
+      color: white;
+      font-family: Josefin sans;
+      font-size: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

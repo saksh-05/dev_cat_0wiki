@@ -1,0 +1,21 @@
+.dot:hover {
+  background-color: $headingColor;
+}
+
+.arrow:hover{
+    fill: $headingColor;
+    stroke: $headingColor;
+}
+
+.footer{
+    h4:hover{
+        text-decoration: underline;
+        text-decoration-thickness: 0.2em;
+    }
+}
+
+.d-menu{
+    li:hover{
+        text-decoration: underline 0.2rem $underlineColor;
+    }
+}
