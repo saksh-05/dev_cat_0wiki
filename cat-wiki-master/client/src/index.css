@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  color: #291507;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a{
+  text-decoration: none;
+}
