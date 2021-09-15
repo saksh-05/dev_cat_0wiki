@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/saurabhtopthon01/Dev_Challenge_Cat_0wiki">
       Solution
     </a>
     <span> | </span>
@@ -39,26 +39,30 @@
 
 ![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
 
-This is a one of the challenges of dev challenge. 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+This is a one of the backend challenges of dev challenge. In this challenge user can search different cat breed, user can see details of cats breed and at last can see user can also different cat breeds.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+This is an interesting challenge, while making this challenge I learned about search component, pagination and responsive image grid.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- []
+- [MaterialUi](https://material-ui.com/)
 
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/f4NJ53rcfgrP6sBMD2jt) was to build an application to complete the given user stories.
+
+- User story: I can search for cat breeds and select a breed of my choice
+- User story: I can see the most popular searched cat breeds summary on the homepage
+- User story: I can see the top 10 most searched cat breeds
+- User story: I can see the breed details including description, temperament, origin, life span,adaptability, affection level, child-friendly, grooming, intelligence, health issues, social needs, stranger friendly
+- User story: I can see more photo of the breed
+- User story: On mobile, when I select the search option, a modal for breed search should pop up
+- User story (optional): I can go to an article about cats when I click read more on Why you should have a cat section
 
 ## How To Use
 
@@ -87,6 +91,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@your-username](https://github.com/saurabhtopthon01)
+- Twitter [@your-twitter](https://twitter.com/SaKSh05)
