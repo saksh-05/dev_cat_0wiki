@@ -50,15 +50,6 @@ const theme = createTheme({
       },
     },
   },
-  breakpoints: {
-    values: {
-      xss:0,
-      sm: 600,
-      md: 960,
-      lg: 1280,
-      xl: 1920,
-    },
-  },
 });
 
 const Breed = ({ data }) => {
@@ -111,8 +102,6 @@ const Breed = ({ data }) => {
                   >
                     {dt.description}
                   </Box>
-                  {console.log(dt)}
-                  {console.log(index)}
                 </Box>
               </Grid>
             );
