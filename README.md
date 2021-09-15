@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/saurabhtopthon01/Dev_Challenge_Cat_0wiki/blob/master/Cat%20Wiki.png)
+![screenshot](https://github.com/saurabhtopthon01/dev_cat_0wiki/blob/master/Cat%20Wiki.png)
 
 This is a one of the backend challenges of dev challenge. In this challenge user can search different cat breed, user can see details of cats breed and at last can see user can also different cat breeds.
 
