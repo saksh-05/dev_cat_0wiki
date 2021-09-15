@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/saurabhtopthon01/Dev_Challenge_Cat_0wiki">
+    <a href="https://github.com/saurabhtopthon01/dev_cat_0wiki">
       Solution
     </a>
     <span> | </span>
