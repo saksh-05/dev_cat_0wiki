@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://cat-0wiki.herokuapp.com/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/saurabhtopthon01/Dev_Challenge_Cat_0wiki">
+    <a href="https://github.com/saurabhtopthon01/dev_cat_0wiki">
       Solution
     </a>
     <span> | </span>
